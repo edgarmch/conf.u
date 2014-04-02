@@ -1,0 +1,64 @@
+gshutdown
+----
+wine:
+
+sudo apt-get install mesa-utils mesa-utils-extra libgl1-mesa-glx:i386 libgl1-mesa-dev ia32-libs
+sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/mesa/libGL.so
+sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so /usr/lib/i386-linux-gnu/libGL.so
+
+sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install wine
+
+export WINEPREFIX=”/home/nombre_usuario/.wineprefixes/office2010/”
+
+   sudo gedit /home/nombre_usuario/.bashrc
+   export WINEARCH=”win32″
+
+winetricks --gui
+
+DLL--dotnet20, msxml6
+font--corefonts
+winecfg--libreries, gdiplus, riched20, msxml6(native)
+
+---
+
+sudo gedit /home/nombre_usuario/.bashrc
+
+---
+
+furiusisomount
+
+----
+ 
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install xfce4
+sudo apt-get install jockey-gtk
+sudo apt-get install xdm
+sudo apt-get install ipython
+sudo apt-get install python-numpy
+sudo apt-get install python-scipy
+sudo apt-get install python-matplotlib
+sudo apt-get install python-dev
+sudo apt-get install git
+sudo apt-get install python-sphinx
+sudo apt-get install gfortran
+sudo apt-get install openmpi-bin
+sudo apt-get install liblapack-dev
+sudo apt-get install thunar
+sudo apt-get install xfce4-terminal
+
+
+# some packages not installed on the VM 
+# that you might want to add:
+
+sudo apt-get install gitk               # to view git history
+sudo apt-get install xxdiff             # to compare two files
+sudo apt-get install python-sympy       # symbolic python
+sudo apt-get install imagemagick        # so you can "display plot.png"
+
+
+sudo apt-get install python-setuptools  # so easy_install is available
+sudo easy_install nose                  # unit testing framework
+sudo easy_install StarCluster           # to help manage clusters on AWS
